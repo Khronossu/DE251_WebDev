@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>04</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 267px; 
+            height: 310px; 
+            /* border-radius: 25%; */
+        }
+        .header h1 {
+            margin: 10px 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px; 
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            width: 20%; 
+        }
+        .highlight {
+            background-color: lightblue;
+        }
+        .grey {
+            background-color: grey;
+            color: white; 
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="img/purin.jpg" alt="Purin's Photo">
+        <h1>Purin's DE Time Table 1/2024</h1>
+    </div>
+    <table border="2">
+        <tr><th colspan="5" class="grey">Time Table</th></tr>
+        <tr>
+            <td class="highlight"><b>Mon</b></td>
+            <td class="highlight"><b>Tue</b></td>
+            <td class="highlight"><b>Wed</b></td>
+            <td class="highlight"><b>Thu</b></td>
+            <td class="highlight"><b>Fri</b></td>
+        </tr>
+        <tr>
+            <td>SWU195 B07 <br>time 08:30-12:20<br><img src="img/swu195.jpg" alt="SWU195" width="50"></td>
+            <td></td>
+            <td>DE281 B01<br>time 09:30-12:20<br><img src="img/de281.jpg" alt="DE281" width="50"></td>
+            <td>ZBS06 B01<br>time 08:30-12:20<br><img src="img/zbs06.jpg" alt="ZBS06" width="50"></td>
+            <td>DE251 B01<br>time 08:30-12:20<br><img src="img/de251.jpg" alt="DE251" width="50"></td>
+        </tr>
+        <tr><th colspan="5" class="highlight"><b>Lunch</b></th></tr>
+        <tr>
+            <td>SWU196 B07<br>time 13:30-17:20<br><img src="img/swu196.jpg" alt="SWU196" width="50"></td>
+            <td></td>
+            <td>DE321 B01<br>time 13:30-16:20<br><img src="img/de321.jpg" alt="DE321" width="50"></td>
+            <td>ZBS06 B01<br>time 13:30-14:20<br><img src="img/zbs06.jpg" alt="ZBS06" width="50"></td>
+            <td>DE281 B01<br>time 13:30-16:20<br><img src="img/de281.jpg" alt="DE281" width="50"></td>
+        </tr>
+    </table>
+</body>
+</html>
