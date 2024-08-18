@@ -1,0 +1,45 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Prompt', sans-serif;
+        }
+
+        #myCanvas {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #333;
+            background-color: #ffffff;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            const canvas = document.getElementById('myCanvas');
+            const context = canvas.getContext('2d');
+
+            context.font = "24px Arial";
+            context.lineWidth = 2;
+            context.strokeStyle = '#333';
+
+            // Draw text lines
+            context.strokeText('Name: Purin', 20, 50);
+            context.strokeText('Surname: Boonpetch', 20, 100);
+            context.strokeText('Nickname: Purin', 20, 150);
+        }
+    </script>
+</head>
+
+<body>
+<canvas id="myCanvas" width="600" height="200"></canvas>
+
+
+
+</body></html>
