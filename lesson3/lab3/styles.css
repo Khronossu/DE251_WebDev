@@ -4,65 +4,72 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Ensure padding and borders are included in width/height */
 }
 
 /* Header Styles */
 header {
-    background-color: #000000; /* Vibrant orange header */
+    background-color: #000000; /* Black background for the header */
     color: #ffffff;
     text-align: center;
-    padding: 10px 20px;
+    padding: 20px 0; /* Increased padding for better spacing */
+    border-bottom: 2px solid #ffa31a; /* Modern orange border */
 }
 
 header h1 {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 28px; /* Larger font size for the main header */
+    font-weight: 600; /* Slightly lighter weight for a modern look */
     margin: 0;
 }
 
 header p {
     font-size: 18px;
-    margin: 10px 0 0;
+    margin: 5px 0 0; /* Reduced top margin for a tighter layout */
 }
 
 /* Section Styles */
 section {
-    padding: 40px 20px;
-    margin: 0 auto;
-    max-width: 900px;
+    padding: 20px;
+    margin: 40px auto; /* Increased margin for more space */
+    max-width: 800px; /* Fixed width of section boxes */
     background-color: #292929; /* Dark grey for section background */
     border: 1px solid #808080; /* Light grey border */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    border-radius: 12px; /* Rounded corners for a modern feel */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+    text-align: left; /* Left-align text for readability */
+    position: relative; /* Ensure section is positioned correctly */
+    z-index: 1; /* Ensure section is above footer */
 }
 
+/* Headings */
 h2 {
-    font-size: 28px;
+    font-size: 24px; /* Slightly smaller font size for headings */
     color: #ffa31a; /* Orange heading color */
-    border-bottom: 3px solid #ffa31a;
+    border-bottom: 2px solid #ffa31a; /* Slimmer orange border */
     padding-bottom: 10px;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 
+/* Paragraphs */
 p {
-    line-height: 1.6;
+    line-height: 1.8; /* Increased line height for readability */
     font-size: 16px;
     margin: 0 0 20px;
 }
 
+/* Lists */
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     background-color: #292929; /* Same dark grey as section */
-    text-align: center;
-    border-radius: 5px;
+    text-align: left; /* Align list items to the left */
+    border-radius: 8px;
 }
 
 li {
-    display: inline;
+    display: inline-block; /* Use inline-block for proper spacing */
     margin: 0 15px;
 }
 
@@ -70,9 +77,9 @@ li {
 a {
     color: #ffa31a; /* Orange for links */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600; /* Slightly heavier weight for links */
     position: relative;
-    padding-bottom: 2px;
+    padding-bottom: 4px; /* Increased padding for better hover effect */
 }
 
 a::after {
@@ -93,11 +100,11 @@ a:hover::after {
 
 /* Image Styles */
 img {
-    /* border: 5px solid #ffa31a; Orange border for images */
-    float: center;
-    margin: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Add vertical space around the image */
+    border-radius: 12px; /* Consistent rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
 }
 
 /* Footer Styles */
@@ -105,9 +112,11 @@ footer {
     background-color: #292929; /* Dark grey for footer */
     color: #ffffff;
     text-align: center;
-    padding: 20px;
-    border-top: 1px solid #ffa31a; /* Orange top border */
+    padding: 2px; /* Minimal padding for an ultra-small footer */
+    border-top: 1px solid #ffa31a; /* Slim orange top border */
     position: fixed;
     width: 100%;
     bottom: 0;
+    font-size: 10px; /* Smaller font size for a very subtle footer */
+    z-index: 0; /* Ensure footer is below other content */
 }
