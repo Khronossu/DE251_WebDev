@@ -1,0 +1,123 @@
+/* Apply box-sizing to all elements */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5dc; /* Beige background for a retro, minimal look */
+    color: #333333; /* Dark grey text for contrast */
+    font-family: 'Verdana', sans-serif; /* Simple, retro font */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff; /* White background for the header */
+    color: #333333;
+    text-align: center;
+    padding: 15px 20px;
+    margin-bottom: 20px; /* Gap between header and content boxes */
+    border-bottom: 3px solid #ccc; /* Light grey bottom border */
+}
+
+header h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px; /* Slight letter spacing for a clean look */
+}
+
+header p {
+    font-size: 16px;
+    margin: 10px 0 0;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 900px;
+    background-color: #fafafa; /* Creamy white for section background */
+    border: 2px solid #e0e0e0; /* Light grey border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for a minimal effect */
+    margin-bottom: 60px; /* Ensure space above footer */
+}
+
+h2 {
+    font-size: 24px;
+    color: #666666; /* Soft grey heading color */
+    border-bottom: 2px solid #ccc; /* Light grey border */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center; /* Center text within section */
+}
+
+p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0 0 20px;
+    text-align: justify; /* Align text within paragraphs */
+    color: #333333; /* Dark grey for paragraph text */
+}
+
+ul {
+    list-style-type: decimal; /* Numbered list */
+    padding-left: 20px; /* Space between bullet and text */
+    margin: 0;
+    color: #333333; /* Dark grey text color for list items */
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+/* Links */
+a {
+    color: #999999; /* Soft grey for links */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #999999;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Image Styles */
+img {
+    display: block; /* Corrected to block for image centering */
+    margin: 0 auto; /* Centering the image */
+    border-radius: 10px;
+    border: 3px solid #e0e0e0; /* Light grey border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for emphasis */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ffffff; /* White background for footer */
+    text-align: center; /* Center text in footer */
+    padding: 1rem;
+    border-top: 2px solid #ccc; /* Light grey border at the top of the footer */
+    font-size: 0.8rem; /* Smaller font size */
+    position: static; /* Ensure footer is not fixed */
+    width: 100%;
+    margin-top: 60px; /* Space above footer to ensure proper placement */
+    color: #666666; /* Soft grey text in footer */
+}

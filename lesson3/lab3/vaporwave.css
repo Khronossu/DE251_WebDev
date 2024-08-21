@@ -1,0 +1,153 @@
+/* Apply box-sizing to all elements */
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background: url('https://i.pinimg.com/originals/4e/de/5a/4ede5a33c5490195b2b17466ad26d124.gif') no-repeat center center fixed; /* Use the vaporwave GIF */
+    background-size: 100%; /* Adjust the size of the GIF */
+    color: #f8f8f2; /* Light pastel text */
+    font-family: 'Courier New', Courier, monospace; /* Retro, typewriter-style font */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+
+
+
+
+
+
+/* Header Styles */
+header {
+    /*background-color: #44475a; /* Darker purple for the header */
+    color: #50fa7b; /* Neon green text */
+    text-align: center;
+    padding: 15px 20px;
+    margin-bottom: 20px; /* Gap between header and content boxes */
+    /*border-bottom: 3px solid #ff79c6; /* Neon pink border */
+}
+
+header h1 {
+    font-size: 32px; /* Larger font size for a bold look */
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 2px; /* Spaced out letters */
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 900px;
+    background-color: #6272a4; /* Lighter purple for section background */
+    border: 2px solid #ff79c6; /* Neon pink border */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for depth */
+    margin-bottom: 60px; /* Ensure space above footer */
+}
+
+h2 {
+    font-size: 28px;
+    color: #8be9fd; /* Neon blue heading color */
+    border-bottom: 3px solid #8be9fd; /* Matching blue border */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center; /* Center text within section */
+}
+
+p {
+    line-height: 1.6;
+    font-size: 16px;
+    margin: 0 0 20px;
+    text-align: justify; /* Align text within paragraphs */
+    color: #f8f8f2; /* Light pastel for paragraph text */
+}
+
+ul {
+    list-style-type: decimal; /* Numbered list */
+    padding-left: 20px; /* Space between bullet and text */
+    margin: 0;
+    color: #f8f8f2; /* White text color for list items */
+}
+
+li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+/* Links */
+a {
+    color: #ffb86c; /* Neon orange for links */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #ffb86c;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Image Styles */
+img {
+    display: block; /* Block for image centering */
+    margin: 20px auto; /* Centering the image with some top/bottom margin */
+    border-radius: 10px;
+    border: 3px solid #ff79c6; /* Neon pink border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Strong shadow for emphasis */
+}
+#headerImg {
+    display: block; /* Block for image centering */
+    margin: 20px auto; /* Centering the image with some top/bottom margin */
+    /*border-radius: 10px;
+    /*border: 3px solid #ff79c6; /* Neon pink border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Strong shadow for emphasis */
+}
+
+/* Vaporwave GIF Section */
+.vaporwave-gif {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.vaporwave-gif img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #bd93f9; /* Neon purple border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for GIFs */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #44475a; /* Dark purple background for footer */
+    text-align: center; /* Center text in footer */
+    padding: 1rem;
+    border-top: 2px solid #ff79c6; /* Neon pink border at the top of the footer */
+    font-size: 0.8rem; /* Smaller font size */
+    position: static; /* Ensure footer is not fixed */
+    width: 100%;
+    margin-top: 60px; /* Space above footer to ensure proper placement */
+    color: #50fa7b; /* Neon green text in footer */
+}
