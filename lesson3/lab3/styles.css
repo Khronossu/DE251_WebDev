@@ -114,9 +114,101 @@ footer {
     text-align: center;
     padding: 2px; /* Minimal padding for an ultra-small footer */
     border-top: 1px solid #ffa31a; /* Slim orange top border */
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
     font-size: 10px; /* Smaller font size for a very subtle footer */
     z-index: 0; /* Ensure footer is below other content */
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    li a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    ul {
+        padding: 15px 0;
+        border-radius: 20px;
+    }
+
+    li {
+        margin: 0 10px;
+    }
+
+    li a {
+        font-size: 16px;
+        padding: 7px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+        max-width: 100%;
+        margin: 0 10px 40px;
+    }
+
+    ul {
+        padding: 10px 0;
+        border-radius: 15px;
+    }
+
+    li {
+        margin: 0 5px;
+    }
+
+    li a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    img {
+        max-width: 90%;
+        height: auto;
+        margin: 30px auto;
+    }
+
+    footer {
+        padding: 15px 0;
+        display: block;
+        unicode-bidi: isolate;
+
+    }
 }
