@@ -50,8 +50,8 @@ section {
     transition: all 0.3s ease; /* Smooth transition for hover effect */
     border-image-outset: 10px 20px;
 
-    border: 10px solid transparent; /* Transparent border to use border-image */
-    border-image: url('https://uploads-ssl.webflow.com/5f2d95cb45872fc361ffb5a6/5f34b40ee53a9b6eeea35f15_GridWindow_Default.svg') 30; /* Default SVG border *
+    border: 500px solid transparent; /* Transparent border to use border-image */
+    border-image: url('https://uploads-ssl.webflow.com/5f2d95cb45872fc361ffb5a6/5f34b40ee53a9b6eeea35f15_GridWindow_Default.svg') ; /* Default SVG border *
 }
 
 section::before {

@@ -36,21 +36,17 @@ header p {
 
 /* Section Styles */
 section {
-    padding: 40px 20px;
+    padding: 0px 20px;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 800px;
     background-color: #6272a4 ; /* Lighter purple for section background */
-    border: 10px solid transparent; /* Transparent border to use border-image */
-    border-image: url('https://uploads-ssl.webflow.com/5f2d95cb45872fc361ffb5a6/5f34b40ee53a9b6eeea35f15_GridWindow_Default.svg') 30; /* Default SVG border */
+    border: 50px solid transparent; /* Transparent border to use border-image */
+    /*border-image: url('https://uploads-ssl.webflow.com/5f2d95cb45872fc361ffb5a6/5f34b40ee53a9b6eeea35f15_GridWindow_Default.svg') 30; /* Default SVG border */
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow for depth */
     margin-bottom: 60px; /* Ensure space above footer */
     position: relative; /* For hover effect positioning */
     transition: all 0.3s ease; /* Smooth transition for hover effect */
-}
-
-section:hover {
-    border-image: url('https://uploads-ssl.webflow.com/5f2d95cb45872fc361ffb5a6/5f34b406b4462e483b25c903_GridWindow_Hover.svg') 30; /* Hover SVG border */
 }
 
 h2 {
