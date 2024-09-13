@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -8,53 +8,30 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            background-color: #212529; /* Dark background color */
+            color: #ffffff; /* White text color */
+        }
+
+        .navbar {
+            background-color: #343a40; /* Darker background for the navbar */
+        }
+
+        .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+            color: #ffffff; /* White text for navbar items */
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M4 6h16M4 12h16M4 18h16' /%3E%3C/svg%3E");
+        }
+
         .bg-gradient-custom {
             background: linear-gradient(to top right, #ff80b5, #9089fc);
             opacity: 0.3;
         }
 
-        header {
-            background-color: #f8f9fa; /* Light background for the navbar */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        }
-
-        main {
-            background: linear-gradient(to top right, #ff80b5, #9089fc);
-            background-size: cover;
-            color: #333; /* Default text color */
-            padding-top: 5rem; /* Adjusted for fixed navbar */
-        }
-
-        @media (min-width: 768px) {
-            main {
-                padding-top: 7rem; /* More space for larger screens */
-            }
-        }
-
-        .display-3 {
-            font-size: 2.5rem; /* Smaller text size on mobile */
-        }
-
-        @media (min-width: 576px) {
-            .display-3 {
-                font-size: 3rem; /* Adjust for tablets */
-            }
-        }
-
-        @media (min-width: 992px) {
-            .display-3 {
-                font-size: 4rem; /* Larger text for desktops */
-            }
-        }
-
-        .btn-primary {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-            border-color: #004085;
+        .container, .text-center {
+            text-align: center; /* Center all text */
         }
     </style>
 </head>
@@ -62,7 +39,7 @@
 <body>
     <div class="bg-white">
         <header class="position-fixed w-100 top-0 zindex-fixed">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor" class="size-6" style="width: 2rem; height: 2rem;">
@@ -82,14 +59,12 @@
         </header>
 
         <main class="pt-5 pt-md-7">
-            <div class="container text-center">
-                <div class="py-5 py-md-7">
-                    <h1 class="display-3 fw-bold">Purin Boonpetch</h1>
-                    <h2 class="mt-4 display-4 fw-bold">66102010250</h2>
-                    <p class="mt-6 lead text-secondary">This is the main page for my DE251 class</p>
-                    <div class="mt-4">
-                        <a href="lab/labs.html" class="btn btn-primary">Select my Labs</a>
-                    </div>
+            <div class="mx-auto text-center py-5 py-md-7">
+                <h1 class="display-3 fw-bold">Purin Boonpetch</h1>
+                <h2 class="mt-4 display-4 fw-bold">66102010250</h2>
+                <p class="mt-6 lead">This is the main page for my DE251 class</p>
+                <div class="mt-4">
+                    <a href="lab/labs.html" class="btn btn-primary">Select my Labs</a>
                 </div>
             </div>
         </main>
