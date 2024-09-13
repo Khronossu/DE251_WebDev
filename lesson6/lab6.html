@@ -6,11 +6,18 @@
     <title>Document</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("button").click(function(){
+        $("document").ready(function(){
+            $("bt1").click(function(){
                 $("p").hide();
             });
         });
+    </script>
+    <script>
+        $("document").ready(function(){
+            $("#bt2").click(function(){
+            $("ul li:first-child").hide();
+        });
+    });
     </script>
 </head>
 <body>
@@ -20,10 +27,31 @@
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolorem ea quae soluta quis libero dolorum pariatur odio molestias, tempore maiores nihil molestiae aliquid perferendis cum debitis. Accusamus, error iste!</p>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate dolorem ea quae soluta quis libero dolorum pariatur odio molestias, tempore maiores nihil molestiae aliquid perferendis cum debitis. Accusamus, error iste!</p>
 
-    <button>Hide all the paragraph</button>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ol>
+
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+    </ul>
+
+    <ul>
+        <li>Apple</li>
+        <li>Samsung</li>
+        <li>Oppo</li>
+    </ul>
+
+    <button id = "bt1">Hide all the paragraph</button>
+    <button id = "bt2">Hide Apple</button>
 
 
 
 
 </body>
-</html>l
+</html>
