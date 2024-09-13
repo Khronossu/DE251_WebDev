@@ -1,143 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab Selector</title>
+    <title>My Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+        .bg-gradient-custom {
+            background: linear-gradient(to top right, #ff80b5, #9089fc);
+            opacity: 0.3;
         }
 
-        .container {
-            width: 80%;
-            margin: auto;
-            max-width: 1200px;
+        header {
+            background-color: #f8f9fa; /* Light background for the navbar */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
-        h1 {
-            text-align: center;
-            margin: 20px 0;
+        main {
+            background: linear-gradient(to top right, #ff80b5, #9089fc);
+            background-size: cover;
+            color: #333; /* Default text color */
+            padding-top: 5rem; /* Adjusted for fixed navbar */
         }
 
-        .folder-select {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
+        @media (min-width: 768px) {
+            main {
+                padding-top: 7rem; /* More space for larger screens */
+            }
         }
 
-        .folder-select select {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+        .display-3 {
+            font-size: 2.5rem; /* Smaller text size on mobile */
         }
 
-        .file-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
+        @media (min-width: 576px) {
+            .display-3 {
+                font-size: 3rem; /* Adjust for tablets */
+            }
         }
 
-        .file-item {
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 150px;
-            padding: 10px;
-            text-align: center;
-            cursor: pointer;
-            text-decoration: none;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+        @media (min-width: 992px) {
+            .display-3 {
+                font-size: 4rem; /* Larger text for desktops */
+            }
         }
 
-        .file-item:hover {
-            background-color: #e6e6e6;
-            transform: scale(1.05);
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
         }
 
-        .file-item a {
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-
-        .file-icon {
-            font-size: 3em;
-            color: #007BFF;
-        }
-
-        .file-name {
-            margin-top: 10px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .file-item a:hover .file-icon {
-            color: #0056b3;
-        }
-
-        .file-item a:hover .file-name {
-            color: #0056b3;
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
         }
     </style>
 </head>
+
 <body>
-<div class="container">
-    <h1>Select a Lab</h1>
-    <div class="folder-select">
-        <select id="folderSelect" onchange="updateFileList()">
-            <option value="">Select a Lab</option>
-            <option value="Lab01_HTML">Lab 1</option>
-            <option value="Lab02">Lab 2</option>
-            <option value="Lab03_CSS">Lab 3</option>
-            <!-- Add more folders here -->
-        </select>
-    </div>
-    <div class="file-list" id="fileList">
-        <!-- Files will be displayed here -->
-    </div>
-</div>
+    <div class="bg-white">
+        <header class="position-fixed w-100 top-0 zindex-fixed">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="size-6" style="width: 2rem; height: 2rem;">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/>
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Add links here if needed -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-<script>
-    const files = {
-        'Lab01_HTML': ['00_test.html', '01_title_body.html', '02_format_text.html', '03_links.html', '04_table.html', '05_mypage.html', 'cinderella_cast.html', 'cinderella1.html', 'cinderella2.htm', 'enhaned_nfl_standings.html', 'nfl_standings.html'],
-        'Lab02': ['lab2.html', 'lab2-1.html', 'lab2-2.html', 'lab2-3.html'],
-        'Lab03_CSS': ['quiz.html', 'index.html','homework03-css/index.html']
-    };
+        <main class="pt-5 pt-md-7">
+            <div class="container text-center">
+                <div class="py-5 py-md-7">
+                    <h1 class="display-3 fw-bold">Purin Boonpetch</h1>
+                    <h2 class="mt-4 display-4 fw-bold">66102010250</h2>
+                    <p class="mt-6 lead text-secondary">This is the main page for my DE251 class</p>
+                    <div class="mt-4">
+                        <a href="lab/labs.html" class="btn btn-primary">Select my Labs</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
 
-    function updateFileList() {
-        const folder = document.getElementById('folderSelect').value;
-        const fileList = document.getElementById('fileList');
-        fileList.innerHTML = '';
-        if (folder) {
-            files[folder].forEach(file => {
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                fileItem.innerHTML = `
-                        <a href="lab/${folder}/${file}">
-                            <div class="file-icon">📄</div>
-                            <div class="file-name">${file}</div>
-                        </a>
-                    `;
-                fileList.appendChild(fileItem);
-            });
-        }
-    }
-</script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
